@@ -1,7 +1,7 @@
 class TopsController < ApplicationController
 
 
-before_action :set_top, only: [:show, :edit, :update, :destroy]
+before_action :set_top, only: [:show, :edit, :update, ]
 
   def index
    @tops = Top.all
@@ -34,11 +34,14 @@ before_action :set_top, only: [:show, :edit, :update, :destroy]
     end
 
     def destroy
-      @top.find(params[:id]).destroy
-     redirect_to tops_path
+      @top = Top.find(params[:id])
+      @top.destroy
+      redirect_to tops_path
     end
 end
 end 
+
+
 private
 def top_params
   params.require(:top).permit(:artist)

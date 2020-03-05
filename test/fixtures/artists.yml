@@ -1,9 +1,9 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  ranking: 1
-  top: one
+  name: MyString
+  genre: MyString
 
 two:
-  ranking: 1
-  top: two
+  name: MyString
+  genre: MyString

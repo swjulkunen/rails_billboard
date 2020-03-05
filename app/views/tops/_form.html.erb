@@ -1,1 +1,8 @@
- <h1><%= @top.id ? 'Edit Sub' : 'New Sub' %></h1>
+ <h1><%= @top.id ? 'Edit Top 100 Artists' : 'Create New Top 100 Artist' %></h1>
+ <br />
+ <%= form_for @top do |f| %>
+ <%= f.label :artist %>
+ <%= f.text_field :artist, required: true, autofocus: true %>
+ <%= f.submit %>
+ 
+<% end %>

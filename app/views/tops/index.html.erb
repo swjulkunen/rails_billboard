@@ -1,0 +1,12 @@
+<h1>All of the Top Artist on Billboard</h1>
+<br />
+<%= link_to 'New Sub', new_top_path %>
+<ul>
+<% @tops.each do |top| %>
+  <li>
+
+<%= link_to  top.artist, top_path(top) %>
+
+  </li>
+<% end %>
+</ul>
